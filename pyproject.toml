@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "selenium_factory"
+description = "Módulo com funções de configuração e geração de WebDriver Selenium em Python."
+authors = [
+    {name = "Eduardo Simões", email = "eisimoes@yahoo.com"},
+]
+dependencies = [
+    "selenium >= 4.21.0",
+]
+requires-python = ">= 3.8"
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "selenium_factory.__version__"}
+
+[tool.black]
+line-length = 100
+skip-string-normalization = 1
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint]
+disable = ["broad-exception-raised", "too-many-arguments", "too-many-positional-arguments"]
