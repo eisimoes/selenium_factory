@@ -1,5 +1,5 @@
 """
-Método Factory para geração de driver Selenium do Firefox
+Módulo para configuração e geração de driver Selenium do Firefox
 """
 
 from contextlib import contextmanager
@@ -135,8 +135,8 @@ class FirefoxWebDriverFactory:
 
             return driver
 
-        except WebDriverException as e:
-            raise WebDriverException(f"Erro ao criar o WebDriver do Firefox: {e}") from e
+        except Exception as e:
+            raise e
 
 
 def configure_firefox_driver(
@@ -194,7 +194,7 @@ def get_firefox_driver():
 
             yield driver
 
-        except WebDriverException as e:
+        except Exception as e:
             raise Exception(f"Failed to create Firefox WebDriver: {e}") from e
 
         finally:
