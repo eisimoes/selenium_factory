@@ -16,7 +16,7 @@ Para instalar uma versão específica:
 
 ### Firefox WebDriver
 
-A função de configuração de WebDriver do Firefox ***configure_firefox()*** aceita os seguintes parâmetros:
+A função de configuração de WebDriver do Firefox ***configure_firefox_driver()*** aceita os seguintes parâmetros:
 
 - **headless:** Indica se o driver deve ser executado em modo headless.
 - **http_proxy:** Endereço do proxy HTTP.
@@ -29,9 +29,9 @@ A função de configuração de WebDriver do Firefox ***configure_firefox()*** a
 ## Exemplo de uso
 
 ```
-from selenium_factory import configure_firefox, get_firefox_driver
+from selenium_factory import configure_firefox_driver, get_firefox_driver
 
-configure_firefox(headless=False)
+configure_firefox_driver(headless=False)
 
 with get_firefox_driver() as driver:
     driver.get("https://www.google.com")
@@ -40,4 +40,4 @@ with get_firefox_driver() as driver:
     driver.get("www.duckduckgo.com")
 ```
 
-Para projetos grandes, basta acionar a função ***configure_firefox()*** na incialização do projeto. Após a configuração inicial, os WebDrivers obtidos à partir da invocação da função ***get_firefox_driver()*** usarão os parâmetros de configuração inicialmente informados.
+Para projetos grandes, basta acionar a função ***configure_firefox_driver()*** na incialização do projeto. Após a configuração inicial, os WebDrivers obtidos à partir da invocação da função ***get_firefox_driver()*** usarão os parâmetros de configuração inicialmente informados.

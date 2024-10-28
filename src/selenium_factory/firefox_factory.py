@@ -139,7 +139,7 @@ class FirefoxWebDriverFactory:
             raise WebDriverException(f"Erro ao criar o WebDriver do Firefox: {e}") from e
 
 
-def configure_firefox(
+def configure_firefox_driver(
     headless: bool = True,
     http_proxy: Optional[str] = None,
     socks_proxy: Optional[str] = None,
