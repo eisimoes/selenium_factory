@@ -2,6 +2,16 @@
 
 Módulo com funções de configuração e geração de WebDriver Selenium em Python. Na versão 1.0.0, apenas a função de geração de WebDriver do Firefox foi implementada.
 
+## Instalação
+
+O módulo pode ser instalado a partir do repositório Github. Para instalar, use o comando:
+
+```pip install git+https://github.com/eisimoes/selenium_factory```
+
+Para instalar uma versão específica:
+
+```pip install git+https://github.com/eisimoes/selenium_factory@1.0.0```
+
 ## Parâmetros de configuração
 
 ### Firefox WebDriver
