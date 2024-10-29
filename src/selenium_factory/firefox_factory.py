@@ -25,7 +25,7 @@ def singleton(cls: Type[T]) -> Callable[[], T]:
     Args:
         cls (Type[T]): A classe a ser tornada um singleton.
 
-    Retorna:
+    Returns:
         Callable[[], T]: Uma função que retorna a instância singleton da classe.
     """
     instances: Dict[Type[T], T] = {}
